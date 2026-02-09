@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gourmet Haven</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4',
+                        dark: '#2D3436',
+                        light: '#F7F9FC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-serif text-primary flex items-center gap-2">
+                <i class="fas fa-utensils"></i> Gourmet Haven
+            </a>
+
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="recipes.html" class="hover:text-primary transition-colors">Recipes</a>
+                <a href="about.html" class="text-primary font-semibold">About</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+            <a href="recipes.html" class="block py-2 text-gray-600 hover:text-primary">Recipes</a>
+            <a href="about.html" class="block py-2 text-primary font-semibold">About</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-12 text-center bg-white">
+        <h1 class="text-4xl md:text-5xl font-bold font-serif mb-4">Our Story</h1>
+        <p class="text-gray-500 max-w-2xl mx-auto">Passionate about connecting food lovers with the happiness of
+            cooking.</p>
+    </div>
+
+    <!-- Content -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=2070&auto=format&fit=crop"
+                        alt="Kitchen Team" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold font-serif mb-6 text-dark">It started in a small kitchen</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Gourmet Haven began as a humble blog by a group of friends who loved to experiment with flavors.
+                        We realized that the best recipes aren't just about ingredients; they're about the memories
+                        created while making them.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Today, we are a community of millions of home cooks, professional chefs, and food enthusiasts.
+                        We believe that good food should be accessible to everyone, everywhere.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 text-center">
+                        <div>
+                            <span class="block text-3xl font-bold text-primary">500+</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Recipes</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-primary">50k+</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Users</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-primary">100+</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Chefs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-serif mb-4">Meet the Chefs</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-light p-6 rounded-2xl text-center group hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 relative">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef"
+                            class="w-full h-full rounded-full object-cover border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold font-serif">Chef John</h3>
+                    <p class="text-primary text-sm font-semibold mb-4">Head of Culinary</p>
+                    <p class="text-gray-600 text-sm italic">"Cooking is an art, but eating is a passion."</p>
+                </div>
+
+                <div
+                    class="bg-light p-6 rounded-2xl text-center group hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 relative">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chef"
+                            class="w-full h-full rounded-full object-cover border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold font-serif">Sarah B.</h3>
+                    <p class="text-primary text-sm font-semibold mb-4">Pastry Specialist</p>
+                    <p class="text-gray-600 text-sm italic">"Life is short, eat dessert first."</p>
+                </div>
+
+                <div
+                    class="bg-light p-6 rounded-2xl text-center group hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 relative">
+                        <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Chef"
+                            class="w-full h-full rounded-full object-cover border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold font-serif">Mike R.</h3>
+                    <p class="text-primary text-sm font-semibold mb-4">Grill Master</p>
+                    <p class="text-gray-600 text-sm italic">"There's no such thing as too much flavor."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Gourmet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

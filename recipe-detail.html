@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfectly Grilled Steak | Gourmet Haven</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4',
+                        dark: '#2D3436',
+                        light: '#F7F9FC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-serif text-primary flex items-center gap-2">
+                <i class="fas fa-utensils"></i> Gourmet Haven
+            </a>
+
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="recipes.html" class="hover:text-primary transition-colors">Recipes</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+            <a href="recipes.html" class="block py-2 text-primary font-semibold">Recipes</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-primary">About</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Recipe Hero -->
+    <div class="relative h-[60vh] md:h-[70vh]">
+        <img src="https://images.unsplash.com/photo-1544025162-d76690b67f11?q=80&w=2070&auto=format&fit=crop"
+            alt="Steak" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 text-white">
+            <div class="container mx-auto">
+                <span
+                    class="bg-primary text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wide mb-4 inline-block">Dinner</span>
+                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4">Pan-Seared Ribeye Steak with Garlic Butter
+                </h1>
+                <div class="flex flex-wrap items-center gap-6 text-sm md:text-base">
+                    <div class="flex items-center gap-2">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef"
+                            class="w-10 h-10 rounded-full border-2 border-primary">
+                        <span class="font-medium">By Chef John</span>
+                    </div>
+                    <div class="flex items-center gap-2"><i class="far fa-clock"></i> 25 mins</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-fire"></i> 650 kcal</div>
+                    <div class="flex items-center gap-1 text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span class="text-white opacity-80 ml-1">(128 Reviews)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Main Content -->
+            <div class="lg:w-2/3">
+                <div class="bg-white p-8 rounded-2xl shadow-sm mb-8">
+                    <h2 class="text-2xl font-bold font-serif mb-4">Description</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        This pan-seared ribeye steak is the ultimate steakhouse experience right in your kitchen. Basted
+                        with garlic-herb butter, it’s juicy, tender, and incredibly flavorful. Perfect for a special
+                        dinner or simply when you want to treat yourself.
+                    </p>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm mb-8">
+                    <h2 class="text-2xl font-bold font-serif mb-6 flex items-center gap-3">
+                        <i class="fas fa-carrot text-primary"></i> Ingredients
+                    </h2>
+                    <ul class="space-y-4">
+                        <li
+                            class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b last:border-0 border-gray-100">
+                            <input type="checkbox"
+                                class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="text-gray-700">2 (1-inch thick) ribeye steaks</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b last:border-0 border-gray-100">
+                            <input type="checkbox"
+                                class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="text-gray-700">Salt and freshly ground black pepper</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b last:border-0 border-gray-100">
+                            <input type="checkbox"
+                                class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="text-gray-700">3 tbsp unsalted butter</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b last:border-0 border-gray-100">
+                            <input type="checkbox"
+                                class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="text-gray-700">3 cloves garlic, smashed</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b last:border-0 border-gray-100">
+                            <input type="checkbox"
+                                class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="text-gray-700">2 sprigs fresh rosemary</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b last:border-0 border-gray-100">
+                            <input type="checkbox"
+                                class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="text-gray-700">1 tbsp olive oil</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Directions -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <h2 class="text-2xl font-bold font-serif mb-6 flex items-center gap-3">
+                        <i class="fas fa-list-ol text-primary"></i> Instructions
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
+                                1</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Prep the Steaks</h3>
+                                <p class="text-gray-600 leading-relaxed">Let the steaks sit at room temperature for 30
+                                    minutes. Pat dry with paper towels. Season generously with salt and pepper on all
+                                    sides.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
+                                2</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Sear</h3>
+                                <p class="text-gray-600 leading-relaxed">Heat a cast-iron skillet over high heat. Add
+                                    oil and heat until shimmering. Carefully place steaks in the pan and cook for 3-4
+                                    minutes until a brown crust forms. Flip.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
+                                3</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Baste with Butter</h3>
+                                <p class="text-gray-600 leading-relaxed">Reduce heat to medium. Add butter, garlic, and
+                                    rosemary. Tilt the pan and spoon the foaming butter over the steaks repeatedly for
+                                    1-2 minutes until desired doneness (130°F for medium-rare).</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
+                                4</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Rest</h3>
+                                <p class="text-gray-600 leading-relaxed">Remove steaks from pan and let them rest on a
+                                    board for 5-10 minutes before slicing. This allows the juices to redistribute.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 space-y-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold font-serif text-xl mb-4">Nutrition Facts</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Calories</span>
+                            <span class="font-semibold">650</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Protein</span>
+                            <span class="font-semibold">42g</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Fat</span>
+                            <span class="font-semibold">50g</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Carbs</span>
+                            <span class="font-semibold">2g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-primary text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="font-bold font-serif text-2xl mb-2">Need Ingredients?</h3>
+                        <p class="mb-6 opacity-90">Get everything you need for this recipe delivered to your doorstep in
+                            1 hour.</p>
+                        <button
+                            class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-gray-100 transition-colors">
+                            Order Now
+                        </button>
+                    </div>
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white opacity-10 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Gourmet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
